@@ -5,10 +5,15 @@ import java.util.Objects;
 public abstract class Vehicle implements Sellable {
     private String id;
     private double baseCost;
+    private String color;
 
     public Vehicle(String id, double baseCost) {
         this.id = id;
         this.baseCost = baseCost;
+	this.color = "Black";
+    }
+    public Vehicle(String color){
+	this.color = color;
     }
 
     public String identity() {
