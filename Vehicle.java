@@ -6,11 +6,13 @@ public abstract class Vehicle implements Sellable {
     private String id;
     private double baseCost;
     private String color;
+    private boolean isFullOption;
 
     public Vehicle(String id, double baseCost) {
         this.id = id;
         this.baseCost = baseCost;
 	this.color = "Black";
+	isFullOption = false;
     }
     public Vehicle(String color){
 	this.color = color;
@@ -21,7 +23,10 @@ public abstract class Vehicle implements Sellable {
     }
 
     public double getBCost() {
-        return baseCost;
+        if (isFullOption == false)
+	    return baseCost;
+	else
+	    return baseCost + 2000;
     }
 
     @Override
