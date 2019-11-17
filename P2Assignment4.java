@@ -6,6 +6,7 @@ public class P2Assignment4 {
         Sellable[] s = new Sellable[2];
         s[0] = new Car(4,"abc",12000);
         s[1] = new Car(6,"xyz",30000);
+	s[0].changeColor("Yellow"); // changing the car color.
         
         if(s[0].equals(s[1])){
             System.out.println("The 2 cars are equal");
